@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Change Candy!</h1>
     <v-form>
       <v-container>
         <v-text-field
@@ -55,7 +56,7 @@ export default {
           error;
           this.$root.$emit(
             "red_message",
-            "Sorry something went wrong with logging in. Please try again later"
+            "Sorry something went wrong with changing candy. Please try again later"
           );
         });
     },

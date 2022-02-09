@@ -24,7 +24,7 @@ export default {
           error;
           this.$root.$emit(
             "api_message",
-            "Sorry something went wrong with logging in. Please try again later"
+            "Sorry something went wrong with getting candies. Please try again later"
           );
         });
     },

@@ -1,8 +1,9 @@
 <template>
   <div>
     <h1>Posts</h1>
+    <!-- A button that calls the function. And we loop over the candies list to show each post on the page -->
     <v-btn @click="get_candies()">GET CANDY POSTS</v-btn>
-    <div v-for="candy in candies" :key="candy[0]">
+    <div v-for="candy in candies" :key="candy[3]">
       <p>{{ candy[0] }}: {{ candy[1] }}</p>
     </div>
   </div>
@@ -12,6 +13,7 @@
 export default {
   name: "show-candies",
   methods: {
+    // Axios request that gets all the candy posts from the DB and stores them to a list
     get_candies() {
       this.$axios
         .request({
@@ -23,7 +25,7 @@ export default {
         .catch((error) => {
           error;
           this.$root.$emit(
-            "api_message",
+            "red_message",
             "Sorry something went wrong with getting candies. Please try again later"
           );
         });

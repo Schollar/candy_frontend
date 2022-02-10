@@ -45,5 +45,6 @@ div {
   position: fixed;
   top: 50%;
   width: 100%;
+  z-index: 3;
 }
 </style>

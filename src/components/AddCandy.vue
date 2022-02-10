@@ -26,6 +26,7 @@
 export default {
   name: "add-candy",
   methods: {
+    // Axios request that gets user input to insert a new candy post to the DB
     add_candy() {
       var candy_title = this.candy_title;
       var candy_content = this.candy_content;
@@ -48,7 +49,7 @@ export default {
         .catch((error) => {
           error;
           this.$root.$emit(
-            "api_message",
+            "red_message",
             "Sorry something went wrong with posting. Please try again later"
           );
         });
@@ -57,6 +58,8 @@ export default {
   data() {
     return {
       candy: [],
+      candy_title: "",
+      candy_content: "",
     };
   },
 };

@@ -30,6 +30,7 @@
 export default {
   name: "change-candy",
   methods: {
+    // Axios request that gets user input to change the title and content of a candy
     change_candy() {
       var candy_title = this.candy_title;
       var candy_content = this.candy_content;
@@ -49,7 +50,7 @@ export default {
           this.candy = response.data;
           this.$root.$emit(
             "api_message",
-            "You have successfully changed an animal!"
+            "You have successfully changed a candy!"
           );
         })
         .catch((error) => {
@@ -64,6 +65,9 @@ export default {
   data() {
     return {
       candy: [],
+      candy_title: "",
+      candy_new_title: "",
+      candy_content: "",
     };
   },
 };
